@@ -55,8 +55,9 @@ ROOT_URLCONF = 'tdcqma_blog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [os.path.join(BASE_DIR,'templates')],  # 在项目根目录下创建templates目录，定义模版目录
+        # 'APP_DIRS': True,
+        'APP_DIRS': False,  # 由True改为False告诉Django不要按照默认方式寻找模板文件了。
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
