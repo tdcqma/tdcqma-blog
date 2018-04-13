@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import BLogArticles
+from .models import BlogArticles
 # Register your models here.
 
-class BLogArticlesAdmin(admin.ModelAdmin):
+class BlogArticlesAdmin(admin.ModelAdmin):
     list_display = ("title","author","publish")
     list_filter = ("publish","author")
     search_fields = ("title","body")
@@ -10,4 +10,4 @@ class BLogArticlesAdmin(admin.ModelAdmin):
     date_hierarchy = "publish"
     ordering = ['publish','author']
 
-admin.site.register(BLogArticles,BLogArticlesAdmin)
+admin.site.register(BlogArticles,BlogArticlesAdmin)

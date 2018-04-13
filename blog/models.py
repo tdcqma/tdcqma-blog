@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 # Create your models here.
 
-class BLogArticles(models.Model):
+class BlogArticles(models.Model):
     title = models.CharField(max_length=300)
     author = models.ForeignKey(User,related_name="blog_posts")
     body = models.TextField()
