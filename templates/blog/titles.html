@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 {% block title %}blog titles{% endblock %}
 {% block content %}
 <div class="row text-center vertical-middle-sm">
@@ -13,9 +14,9 @@
         </ul>
     </div>
     <div class="col-xs-6 col-md-4">
-        <!--<h2>广告</h2>-->
+        <h2>广告</h2>
         <p>YIDISEC：www.yidisec.com</p>
-        <img width="200px" src="/static/nh.png">
+        <img width="200px" src="{% static 'images/hana.jpg' %}">
     </div>
 </div>
 {% endblock %}
